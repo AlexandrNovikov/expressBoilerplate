@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  node_test:
+    build:
+      context: .
+    container_name: node_test
+    environment:
+      - PORT=3000
+    command: npm start
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
